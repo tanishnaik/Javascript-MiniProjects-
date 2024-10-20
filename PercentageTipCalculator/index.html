@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+    <!-- Inside the div you have to create input fields 
+    such as Bill Amount ,Percentge Tip(input to be disabled)
+    total amount(input field disabled)
+    and a button to calculate -->
+
+    <div>
+        <label for="bill">Bill Amount</label>
+        <input type="text" id="bill-amt">
+        <br><br>
+        <label for="percentage">Percentge Tip</label>
+        <input type="text" id="percentage-tip">
+        <br><br>
+        <label for="tip-amt">Tip Amount</label>
+        <input type="text" id="tip-amt">
+        <br><br>
+        <label for="total-amt">Total Amount</label>
+        <input type="text" id="total-amt" disabled>
+        <br><br>
+        <button id="calculate">Calculate</button>
+
+    </div>
+    <div class="output"></div>
+    <script src="./app.js"></script>
+    
+</body>
+</html>

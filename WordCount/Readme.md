@@ -1,0 +1,1 @@
+This project is used to calculate the word in the string
