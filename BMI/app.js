@@ -3,7 +3,7 @@ let weight=document.getElementById("weight");
 let outputDiv=document.getElementById("output-container");
 let button=document.getElementById("btn");
 button.addEventListener("click",()=>{
-    let heightValue=parseFloat(height.value);//Converting in inches
+    let heightValue=(parseFloat(height.value))/100;//Converting in inches
     let weightValue=parseFloat(weight.value);
     let bmi;
     height.value=weight.value='';
@@ -17,7 +17,19 @@ button.addEventListener("click",()=>{
     }
     else{
         bmi=(weightValue/(heightValue**2)).toFixed(2);
-        console.log(bmi);
+        if(bmi<18.5){
+            outputDiv.innerHTML=`<span>Underweight</span>`;
+            outputDiv.classList.add('underweight');
+
+        }
+        else if(bmi>=18.5 && bmi<24.9){
+            outputDiv.innerHTML=`<span>Normal</span>`;
+            outputDiv.classList.add('normal');
+        }
+        else{
+            outputDiv.innerHTML=`<span>Overweight</span>`;
+            outputDiv.classList.add('overweight');
+        }
         
 
     }
